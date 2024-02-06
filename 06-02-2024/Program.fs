@@ -9,7 +9,7 @@ let square (size: int) = size * size
 // all numbers in array.
 // The "|>" expression is used to pass values to execute
 // in the others functions
-let sumSquares = [ 1..10 ] |> List.map square |> List.sum
+let sumSquares: int = [ 1..10 ] |> List.map square |> List.sum
 
 [<EntryPoint>]
 let main args =
