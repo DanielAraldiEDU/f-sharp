@@ -6,7 +6,9 @@ let square (size: int) = size * size
 
 // Create an array with 10 values and it make a map
 // using the square function, returning the sum between
-// all numbers in array
+// all numbers in array.
+// The "|>" expression is used to pass values to execute
+// in the others functions
 let sumSquares = [ 1..10 ] |> List.map square |> List.sum
 
 [<EntryPoint>]
