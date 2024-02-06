@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xw0Xu86HCmW2MHL3czPLkb/dYm7YnXdzJuPXxwyqDNVQf1HIvigG+dwiMFNChPaFIO5GU/LR/B8YluFac8fmow==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\danie\\Documents\\GitHub\\f-sharp\\06-02-2024\\06-02-2024.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\danie\\.nuget\\packages\\fsharp.core\\8.0.101\\fsharp.core.8.0.101.nupkg.sha512"
+  ],
+  "logs": []
+}
