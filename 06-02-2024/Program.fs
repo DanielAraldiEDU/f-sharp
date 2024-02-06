@@ -2,6 +2,13 @@
 
 let sum numberOne numberTwo = numberOne + numberTwo
 
+let square (size: int) = size * size
+
+// Create an array with 10 values and it make a map
+// using the square function, returning the sum between
+// all numbers in array
+let sumSquares = [ 1..10 ] |> List.map square |> List.sum
+
 [<EntryPoint>]
 let main args =
     // Call the helloWord function
@@ -15,5 +22,7 @@ let main args =
     // The sum function has priority over and it's
     // been called first
     printfn "The result is %i" (sum value otherValue)
+
+    printfn "Sum all squares is %i" sumSquares
 
     0
