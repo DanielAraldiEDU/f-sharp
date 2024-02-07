@@ -47,7 +47,7 @@ let main args =
     printfn "Value without signal: %i" (moduleWithoutSignal anotherValue)
     printfn "Media between these two numbers is: %i" (mediaBetweenTwoNumbers value otherValue)
     printfn "Show less value between three numbers is: %i" (lessValueBetweenThreeNumbers value otherValue anotherValue)
-    // The "%i" print an string value in printfn
+    // The "%s" print an string value in printfn
     printfn "Show which triangle type is: %s" (showTriangleType value value value)
 
     0
