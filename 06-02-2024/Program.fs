@@ -14,6 +14,8 @@ let sumSquares: int = [ 1..10 ] |> List.map square |> List.sum
 let moduleWithoutSignal (number: int) =
     if number < 0 then number * -1 else number
 
+let mediaBetweenTwoNumbers numberOne numberTwo = (numberOne + numberTwo) / 2
+
 [<EntryPoint>]
 let main args =
     // Call the helloWord function
@@ -29,5 +31,6 @@ let main args =
     printfn "The result is: %i" (sum value otherValue)
     printfn "Sum all squares is: %i" sumSquares
     printfn "Value without signal: %i" (moduleWithoutSignal -10)
+    printfn "Media between these two numbers is: %i" (mediaBetweenTwoNumbers value otherValue)
 
     0
