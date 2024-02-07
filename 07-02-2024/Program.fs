@@ -24,11 +24,11 @@ let handleTriangleType numberOne numberTwo numberThree =
     then
         printfn "Não forma um triângulo"
     elif numberOne = numberTwo && numberOne = numberThree then
-        printfn "Equilátero"
+        printfn "Triângulo Equilátero"
     elif numberOne = numberTwo || numberTwo = numberThree || numberOne = numberThree then
-        printfn "Isósceles"
+        printfn "Triângulo Isósceles"
     else
-        printfn "Escaleno"
+        printfn "Triângulo Escaleno"
 // --------------------------------------------------------------------------
 
 // 3) Faça uma função que a partir de um vetor [0..20] e faça o seguinte
@@ -40,13 +40,11 @@ let handleTriangleType numberOne numberTwo numberThree =
 //  múltiplos de 6.
 // As operações devem ser aplicadas utilizando o operador pipe (|>).
 
-let isPair number = number % 2 = 0
-
-let multiplyByTwo number = number * 2
-
-let multiplesOfSix number = number % 6 = 0
-
 let handleMultiplesOfSixAnArray =
+    let isPair number = number % 2 = 0
+    let multiplyByTwo number = number * 2
+    let multiplesOfSix number = number % 6 = 0
+
     [ 0..20 ]
     |> List.filter isPair
     |> List.map multiplyByTwo
@@ -60,16 +58,17 @@ let handleMultiplesOfSixAnArray =
 // devem estar aninhadas dentro de uma função resultado_notas que deve chamar
 // as 3 funções internas utilizando pipeline.
 
-let mediaIsGreatherOrEqualSix media = media >= 6.0
-
-let handleApproved isApproved =
-    if (isApproved) then
-        printf "Aprovado!"
-    else
-        printf "Reprovado!"
-
+// resultado_notas -> resultsOfGrades
 let resultsOfGrades numberOne numberTwo numberThree =
     let media = (numberOne + numberTwo + numberThree) / 3.0
+    let mediaIsGreatherOrEqualSix media = media >= 6.0
+
+    let handleApproved isApproved =
+        if (isApproved) then
+            printf "Aprovado!"
+        else
+            printf "Reprovado!"
+
     media |> mediaIsGreatherOrEqualSix |> handleApproved
 // --------------------------------------------------------------------------
 
