@@ -31,7 +31,7 @@ let showTriangleType basis left right =
 
 [<EntryPoint>]
 let main args =
-    // Call the helloWord function
+    // Call the helloWorld function
     helloWorld ()
 
     // Force type integer to value constant
@@ -39,9 +39,9 @@ let main args =
     let otherValue: int = value + 4
     let anotherValue: int = -10
 
-    // The "%i" print an integer value in printfn
+    // The "%i" print an integer value in printfn.
     // The sum function has priority over and it's
-    // been called first
+    // be called first
     printfn "The result is: %i" (sum value otherValue)
     printfn "Sum all squares is: %i" sumSquares
     printfn "Value without signal: %i" (moduleWithoutSignal anotherValue)
