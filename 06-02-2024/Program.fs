@@ -19,14 +19,14 @@ let mediaBetweenTwoNumbers numberOne numberTwo = (numberOne + numberTwo) / 2
 let lessValueBetweenThreeNumbers numberOne numberTwo numberThree =
     if numberOne < numberTwo && numberTwo < numberThree then
         numberOne
-    else if numberTwo < numberOne && numberTwo < numberThree then
+    elif numberTwo < numberOne && numberTwo < numberThree then
         numberTwo
     else
         numberThree
 
 let showTriangleType basis left right =
     if basis = left && basis = right then "Equilateral Triangle"
-    else if left = right then "Isosceles Triangle"
+    elif left = right then "Isosceles Triangle"
     else "Stepped Triangle"
 
 [<EntryPoint>]
