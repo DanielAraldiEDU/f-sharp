@@ -11,8 +11,7 @@ let square (size: int) = size * size
 // in the others functions
 let sumSquares: int = [ 1..10 ] |> List.map square |> List.sum
 
-let moduleWithoutSignal (number: int) =
-    if number < 0 then number * -1 else number
+let moduleWithoutSignal (number: int) = if number < 0 then -number else number
 
 let mediaBetweenTwoNumbers numberOne numberTwo = (numberOne + numberTwo) / 2
 
