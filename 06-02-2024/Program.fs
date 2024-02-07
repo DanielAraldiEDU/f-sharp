@@ -16,6 +16,14 @@ let moduleWithoutSignal (number: int) =
 
 let mediaBetweenTwoNumbers numberOne numberTwo = (numberOne + numberTwo) / 2
 
+let lessValueBetweenThreeNumbers numberOne numberTwo numberThree =
+    if numberOne < numberTwo && numberTwo < numberThree then
+        numberOne
+    else if numberTwo < numberOne && numberTwo < numberThree then
+        numberTwo
+    else
+        numberThree
+
 [<EntryPoint>]
 let main args =
     // Call the helloWord function
@@ -24,13 +32,15 @@ let main args =
     // Force type integer to value constant
     let value: int = 10
     let otherValue: int = value + 4
+    let anotherValue: int = -10
 
     // The "%i" print an integer value in printfn
     // The sum function has priority over and it's
     // been called first
     printfn "The result is: %i" (sum value otherValue)
     printfn "Sum all squares is: %i" sumSquares
-    printfn "Value without signal: %i" (moduleWithoutSignal -10)
+    printfn "Value without signal: %i" (moduleWithoutSignal anotherValue)
     printfn "Media between these two numbers is: %i" (mediaBetweenTwoNumbers value otherValue)
+    printfn "Show less value between three numbers is: %i" (lessValueBetweenThreeNumbers value otherValue anotherValue)
 
     0
