@@ -24,6 +24,11 @@ let lessValueBetweenThreeNumbers numberOne numberTwo numberThree =
     else
         numberThree
 
+let showTriangleType basis left right =
+    if basis = left && basis = right then "Equilateral Triangle"
+    else if left = right then "Isosceles Triangle"
+    else "Stepped Triangle"
+
 [<EntryPoint>]
 let main args =
     // Call the helloWord function
@@ -42,5 +47,7 @@ let main args =
     printfn "Value without signal: %i" (moduleWithoutSignal anotherValue)
     printfn "Media between these two numbers is: %i" (mediaBetweenTwoNumbers value otherValue)
     printfn "Show less value between three numbers is: %i" (lessValueBetweenThreeNumbers value otherValue anotherValue)
+    // The "%i" print an string value in printfn
+    printfn "Show which triangle type is: %s" (showTriangleType value value value)
 
     0
