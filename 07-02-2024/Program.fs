@@ -1,4 +1,6 @@
-﻿// 1) Faça uma função que receba 2 valores e retorne a divisão do maior pelo
+﻿// Trabalho M2 - Daniel Sansão Araldi - Programação Funcional I
+
+// 1) Faça uma função que receba 2 valores e retorne a divisão do maior pelo
 // menor.
 
 let handleDivideBiggestBySmallest numberOne numberTwo =
@@ -22,13 +24,13 @@ let handleTriangleType numberOne numberTwo numberThree =
         || numberTwo >= (numberOne + numberThree)
         || numberThree >= (numberOne + numberTwo)
     then
-        printfn "Não forma um triângulo"
+        printfn "Resultado: Não forma um triângulo"
     elif numberOne = numberTwo && numberOne = numberThree then
-        printfn "Triângulo Equilátero"
+        printfn "Resultado: Triângulo Equilátero"
     elif numberOne = numberTwo || numberTwo = numberThree || numberOne = numberThree then
-        printfn "Triângulo Isósceles"
+        printfn "Resultado: Triângulo Isósceles"
     else
-        printfn "Triângulo Escaleno"
+        printfn "Resultado: Triângulo Escaleno"
 // --------------------------------------------------------------------------
 
 // 3) Faça uma função que a partir de um vetor [0..20] e faça o seguinte
@@ -65,9 +67,9 @@ let resultsOfGrades numberOne numberTwo numberThree =
 
     let handleApproved isApproved =
         if (isApproved) then
-            printf "Aprovado!"
+            printf "Resultado: Aprovado!"
         else
-            printf "Reprovado!"
+            printf "Resultado: Reprovado!"
 
     media |> mediaIsGreatherOrEqualSix |> handleApproved
 // --------------------------------------------------------------------------
@@ -87,7 +89,7 @@ let main argv =
 
     handleTriangleType basis leftSide rightSide
 
-    printf "\nMostra os múltiplos de 6 com os pares dobrados (em um vetor de 1 até 20): "
+    printf "\nMostra os múltiplos de 6 com os pares dobrados (em um vetor de 0 até 20): "
 
     for number in handleMultiplesOfSixAnArray do
         printf "%i " number
@@ -97,6 +99,7 @@ let main argv =
     let notaTwo = System.Console.ReadLine() |> System.Double.Parse
     let notaThree = System.Console.ReadLine() |> System.Double.Parse
 
+    // resultado_notas -> resultsOfGrades
     resultsOfGrades notaOne notaTwo notaThree
 
     0
